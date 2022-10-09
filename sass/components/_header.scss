@@ -1,0 +1,119 @@
+.header {
+  border-bottom: 1px solid #ECECEC;
+  background-color: var(--accent-color);
+}
+
+.header__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav__link {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-nav__link:not(:last-child) {
+  margin-right: 50px; 
+}
+
+.site-nav__link:last-child {
+  margin-right: 318px;
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus {
+  color: var(--nav-color);
+}
+
+.site-nav__link--current {
+  color: var(--nav-color);
+}
+
+.site-nav__link::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  margin-bottom: -1px;
+  border-radius: 4px;
+  background-color: #2196f3;
+  
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+} 
+
+.site-nav__link--current::after {
+  width: 100%;
+}
+
+.site-nav__link:hover &__link::after,
+.site-nav__link:focus &__link::after {
+  width: 100%;
+}
+
+.auth-nav {
+  display: flex;
+  align-items: center;
+}
+
+.auth-nav__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--secondary-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:not(:last-child) {
+  margin-right: 30px;
+  }
+}
+
+.auth-nav__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__link:hover,
+  &__link:focus {
+  color: var(--nav-color);
+  fill: var(--nav-color);
+  }
+} 
+
+.auth-nav__icon {
+  margin-right: 10px;
+  padding: 0;
+  fill: currentColor;
+}
+
+
