@@ -323,19 +323,38 @@ body {
   font-family: var(--main-font);
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+@media screen and (max-width: 480.98px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200.98px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480.98px) {
   .container {
     max-width: 480px;
+  }
+}
+@media screen and (max-width: 768.98px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (max-width: 1200.98px) {
+  .container {
+    max-width: 1200px;
   }
 }
 
@@ -345,17 +364,21 @@ body {
   cursor: pointer;
 }
 
-.header {
-  border-bottom: 1px solid #ECECEC;
-  background-color: var(--accent-color);
+@media screen and (min-width: 1200.98px) {
+  .header {
+    border-bottom: 1px solid #ECECEC;
+    background-color: var(--accent-color);
+  }
 }
 
-.header__box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media screen and (min-width: 1200.98px) {
+  .header__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768.98px) {
   .header__box {
     display: none;
   }
@@ -570,17 +593,33 @@ body {
   letter-spacing: 0.03em;
 }
 
-.hero {
-  text-align: center;
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-Img.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-color: #2f303a;
+@media screen and (max-width: 480.98px) {
+  .hero {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-Img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #2f303a;
+  }
+}
+@media screen and (min-width: 1200.98px) {
+  .hero {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-Img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #2f303a;
+  }
 }
 
 .hero__box {
@@ -863,39 +902,78 @@ body {
   letter-spacing: 0.03em;
 }
 
-.criteria__list {
-  display: flex;
+@media screen and (min-width: 1200.98px) {
+  .criteria__list {
+    display: flex;
+  }
 }
 
-.criteria__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (max-width: 480.98px) {
+  .criteria__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200.98px) {
+  .criteria__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .criteria__image {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
+  width: 100%;
   height: 120px;
   margin-bottom: 30px;
   background-color: var(--third-color);
 }
+@media screen and (min-width: 1200.98px) {
+  .criteria__image {
+    width: 270px;
+    height: 120px;
+  }
+}
 
 .criteria__subtitle {
+  text-align: center;
   margin-bottom: 10px;
   text-transform: uppercase;
+  font-family: var(--main-font);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
 }
+@media screen and (min-width: 1200.98px) {
+  .criteria__subtitle {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+  }
+}
 
 .criteria__text {
   color: var(--secondary-color);
-  font-weight: 700;
+  font-family: var(--main-font);
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200.98px) {
+  .criteria__text {
+    color: var(--secondary-color);
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  }
 }
 
 .functions {

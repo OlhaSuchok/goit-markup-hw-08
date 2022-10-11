@@ -5,17 +5,33 @@ body {
 }
 
 .section {
+  @media screen and (max-width: $mobile) {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
   padding-top: 94px;
   padding-bottom: 94px;
+  }
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: $mobile) {
   max-width: 480px;
+  }
+
+  @media screen and (max-width: $tablet) {
+  max-width: 768px;
+  }
+
+  @media screen and (max-width: $desktop) {
+  max-width: 1200px;
   }
 }
 

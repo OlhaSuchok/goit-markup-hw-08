@@ -1,14 +1,18 @@
 .header {
+  @media screen and (min-width: $desktop) {
   border-bottom: 1px solid #ECECEC;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color); 
+  }
 }
 
 .header__box {
+  @media screen and (min-width: $desktop) {
   display: flex;
   justify-content: center;
   align-items: center;
+  }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $tablet) {
   display: none;
 } 
 }
