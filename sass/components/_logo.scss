@@ -1,9 +1,15 @@
 .logo {
   color: var(--logo-color);
+  font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+
+  @media screen and (max-width: 767px) {
+  font-size: 24px;
+  line-height: 1.17;
+  }
 }
 
 .logo__accent {
@@ -14,9 +20,15 @@
   margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 24px;
+
+  @media screen and (max-width: 480px), (max-width: 767px) {
+  margin-right: 276px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  }
 }
 
-.logo__footer {
+.logo__footer  {
   color: var(--accent-color);  
   font-family: var(--secondary-font);
   font-weight: 700;

@@ -7,6 +7,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+  display: none;
+} 
 }
 
 .site-nav {
@@ -66,8 +70,8 @@
   width: 100%;
 }
 
-.site-nav__link:hover &__link::after,
-.site-nav__link:focus &__link::after {
+.site-nav__link:hover .site-nav__link:after,
+.site-nav__link:focus .site-nav__link::after {
   width: 100%;
 }
 
