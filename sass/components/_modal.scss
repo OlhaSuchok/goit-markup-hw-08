@@ -24,6 +24,7 @@
 }
 
 .modal {
+  @media screen and (max-width: 768.97px) {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -35,6 +36,21 @@
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms linear;
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 528px;
+  min-height: 581px;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms linear;
+  }
 }
 
   .modal__knob {

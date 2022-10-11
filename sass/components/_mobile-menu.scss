@@ -1,9 +1,11 @@
 .header__mobile {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 0;
     margin: 0;
-
+    width: 100%;
+    
     @media screen and (min-width: 768px) {
     display: none;
     padding: 0;
@@ -52,6 +54,12 @@
     }
 }
 
+body {
+    &.scroll-lock {
+    overflow: hidden;
+    }
+}
+
 .header__wrapper {
     display: flex;
     flex-direction: column;
@@ -59,13 +67,9 @@
 }
 
 .header__list {
+    @include font-style(var(--main-font), 500, 18px, 1.22, 0.02em);  
     display: flex;
     align-items: center;
-    
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.22;
-    letter-spacing: 0.02em;
     color: var(--nav-color);
 }
 

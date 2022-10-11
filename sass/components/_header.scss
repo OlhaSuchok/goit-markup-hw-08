@@ -1,19 +1,18 @@
 .header {
-  @media screen and (max-width: $mobile) {
   border-bottom: 1px solid #ECECEC;
   background-color: var(--accent-color);  
-  }
-
-  @media screen and (min-width: $desktop) {
-  border-bottom: 1px solid #ECECEC;
-  background-color: var(--accent-color); 
-  }
 }
 
 .header__box {
   @media screen and (max-width: $tablet) {
   display: none;
-} 
+  } 
+
+  @media screen and (min-width: $tablet) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
 
   @media screen and (min-width: $desktop) {
   display: flex;
@@ -23,25 +22,37 @@
 }
 
 .site-nav {
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: 768.97px) {
     display: flex;
     flex-direction: column;
+  }
+
+  @media screen and (min-width: $tablet) {
+  display: flex;
+  align-items: center;
   }
 
   @media screen and (min-width: $desktop) {
   display: flex;
   align-items: center;
+  justify-content: center;
   }
 }
 
 .site-nav__link {
-  @media screen and (max-width: $mobile) {
-  font-family: var(--main-font);
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.18;
+  @include font-style(var(--main-font), 500, 40px, 1.18, 0.02em);
   padding: 0;
   margin-bottom: 32px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: $tablet) {
+  @include font-style(var(--main-font), 500, 14px, 1.14, 0.02em);  
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   transition-property: color;
   transition-duration: 250ms;
@@ -49,14 +60,10 @@
   }
 
   @media screen and (min-width: $desktop) {
+  @include font-style(var(--main-font), 500, 14px, 1.14, 0.02em);  
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
 
   transition-property: color;
   transition-duration: 250ms;
@@ -65,19 +72,27 @@
 }
 
 .site-nav__link:not(:last-child) {
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: 768.97px) {
   margin-right: 0;
-}
+  }
+
+  @media screen and (min-width: $tablet) {
+  margin-right: 50px; 
+  }
 
   @media screen and (min-width: $desktop) {
   margin-right: 50px; 
-}
+  }
 }
 
 .site-nav__link:last-child {
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: 768.97px) {
   margin-right: 0;
 }
+
+  @media screen and (min-width: $tablet) {
+  margin-right: 318px;
+  }
 
   @media screen and (min-width: $desktop) {
   margin-right: 318px;
@@ -91,6 +106,33 @@
 
 .site-nav__link--current {
   color: var(--nav-color);
+}
+
+ @media screen and (min-width: $tablet) {
+  .site-nav__link::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  margin-bottom: -1px;
+  border-radius: 4px;
+  background-color: #2196f3;
+  
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .site-nav__link--current::after {
+  width: 100%;
+  } 
+
+.site-nav__link:hover .site-nav__link:after,
+.site-nav__link:focus .site-nav__link::after {
+  width: 100%;
+  }
 }
 
  @media screen and (min-width: $desktop) {
@@ -121,11 +163,16 @@
 }
 
 .auth-nav {
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: 768.97px) {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 64px;
+  }
+
+  @media screen and (min-width: $tablet) {
+  display: flex;
+  align-items: center;
   }
 
   @media screen and (min-width: $desktop) {
@@ -135,29 +182,39 @@
 }
 
 .auth-nav__item {
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: 768.97px) {
   padding: 0;
   margin-right: 0;
   }
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
+  @include font-style(var(--main-font), 500, 14px, 1.14, 0.02em);  
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--secondary-color);
+  }
 
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @media screen and (min-width: $desktop) {
+  @include font-style(var(--main-font), 500, 14px, 1.14, 0.02em);  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--secondary-color);
   }
 
   &:not(:last-child) {
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: 768.97px) {
   margin-right: 0;
   }  
+
+  @media screen and (min-width: $tablet) {
+  margin-right: 30px;
+  }
 
   @media screen and (min-width: $desktop) {
   margin-right: 30px;
@@ -166,10 +223,20 @@
 }
 
 .auth-nav__link {
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: 768.97px) {
   display: flex;
   justify-content: center;
   align-items: center;
+  }
+
+  @media screen and (min-width: $tablet) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   @media screen and (min-width: $desktop) {
@@ -189,7 +256,7 @@
   fill: var(--nav-color);
   }
 
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: 768.97px) {
   .auth-nav__item:first-child {
   margin-bottom: 32px;
 
@@ -200,7 +267,7 @@
 }
 }
 
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: 768.97px) {
   .auth-nav__item:last-child {
   font-weight: 500;
   font-size: 24px;
@@ -210,9 +277,15 @@
   }
 
 .auth-nav__icon {
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: 768.97px) {
     display: none;
 }
+
+  @media screen and (min-width: $tablet) {
+  margin-right: 10px;
+  padding: 0;
+  fill: currentColor;
+  }
 
   @media screen and (min-width: $desktop) {
   margin-right: 10px;
