@@ -192,6 +192,8 @@
   @media screen and (max-width: $mobile) {
   .auth-nav__item:first-child {
   margin-bottom: 32px;
+
+  font-weight: 500;
   font-size: 34px;
   line-height: 1.18;
   color: var(--nav-color);
@@ -200,6 +202,7 @@
 
   @media screen and (max-width: $mobile) {
   .auth-nav__item:last-child {
+  font-weight: 500;
   font-size: 24px;
   line-height: 1.17;
   color: var(--secondary-color);

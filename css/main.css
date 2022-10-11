@@ -558,6 +558,7 @@ body {
 @media screen and (max-width: 480.98px) {
   .auth-nav__item:first-child {
     margin-bottom: 32px;
+    font-weight: 500;
     font-size: 34px;
     line-height: 1.18;
     color: var(--nav-color);
@@ -565,6 +566,7 @@ body {
 }
 @media screen and (max-width: 480.98px) {
   .auth-nav__item:last-child {
+    font-weight: 500;
     font-size: 24px;
     line-height: 1.17;
     color: var(--secondary-color);
@@ -653,45 +655,60 @@ body {
   }
 }
 
-.hero__box {
-  margin: 0 auto;
-  max-width: 696px;
+@media screen and (max-width: 480.98px) {
+  .hero__box {
+    margin: 0 auto;
+    max-width: 696px;
+  }
+}
+@media screen and (min-width: 1200.98px) {
+  .hero__box {
+    margin: 0 auto;
+    max-width: 696px;
+  }
 }
 
-.hero__title {
-  text-align: center;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  color: var(--accent-color);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-}
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480.98px) {
   .hero__title {
+    margin-bottom: 30px;
     font-weight: 900;
     font-size: 26px;
     line-height: 1.6;
     letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+  }
+}
+@media screen and (min-width: 1200.98px) {
+  .hero__title {
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
   }
 }
 
-.button__hero {
-  padding-left: 32px;
-  padding-right: 32px;
-  transition-property: color, background-color;
-  transition-duration: 250ms, 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
-}
-.button__hero:hover, .button__hero:focus {
-  color: var(--main-color);
-  background-color: var(--third-color);
-}
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480.98px) {
   .button__hero {
     padding-left: 24px;
     padding-right: 24px;
+  }
+}
+@media screen and (min-width: 1200.98px) {
+  .button__hero {
+    padding-left: 32px;
+    padding-right: 32px;
+    transition-property: color, background-color;
+    transition-duration: 250ms, 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .button__hero:hover, .button__hero:focus {
+    color: var(--main-color);
+    background-color: var(--third-color);
   }
 }
 
