@@ -16,6 +16,11 @@
 .site-nav {
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    align-items: flex-start;
+    flex-direction: column;
+} 
 }
 
 .site-nav__link {
@@ -31,14 +36,30 @@
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (max-width: 767px) {
+  font-size: 40px;
+  line-height: 1.18;
+  padding: 0;
+  margin-bottom: 32px;
+
+}
 }
 
 .site-nav__link:not(:last-child) {
-  margin-right: 50px; 
+  margin-right: 50px;
+
+  @media screen and (max-width: 767px) {
+  margin-right: 0;
+}
 }
 
 .site-nav__link:last-child {
   margin-right: 318px;
+
+  @media screen and (max-width: 767px) {
+  margin-right: 0;
+}
 }
 
 .site-nav__link:hover,
@@ -64,6 +85,10 @@
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (max-width: 767px) {
+  height: 0;
+} 
 } 
 
 .site-nav__link--current::after {
@@ -78,6 +103,12 @@
 .auth-nav {
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 64px;
+} 
 }
 
 .auth-nav__item {
@@ -97,9 +128,18 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+  @media screen and (max-width: 767px) {
+  padding: 0;
+  margin-right: 0;
+  } 
+
   &:not(:last-child) {
   margin-right: 30px;
-  }
+  
+  @media screen and (max-width: 767px) {
+  margin-right: 0;
+  } 
+}
 }
 
 .auth-nav__link {
@@ -114,10 +154,31 @@
   }
 } 
 
+.auth-nav__item:first-child {
+  @media screen and (max-width: 767px) {
+  margin-bottom: 32px;
+  font-size: 34px;
+  line-height: 1.18;
+  color: var(--nav-color);
+}
+}
+
+.auth-nav__item:last-child {
+  @media screen and (max-width: 767px) {
+  font-size: 24px;
+  line-height: 1.17;
+  color: var(--secondary-color);
+}
+}
+
 .auth-nav__icon {
   margin-right: 10px;
   padding: 0;
   fill: currentColor;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+}
 }
 
 

@@ -29,6 +29,13 @@
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
+
+  @media screen and (max-width: 767px) {
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+} 
 }
 
 .button__hero {
@@ -44,4 +51,10 @@
   color: var(--main-color);
   background-color: var(--third-color);
   }
+
+  @media screen and (max-width: 767px) {
+  padding-left: 24px;
+  padding-right: 24px;
+} 
+
 }

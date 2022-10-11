@@ -9,7 +9,7 @@
 
     <header class="header">
         <div class="container">
-   <div class="container header__mobile">
+   <div class="header__mobile">
 <a class="logo logo__header" href="index.html"><span class="logo__accent" >Web</span>Studio</a>
 
 <div class="header__nav mobile-menu js-menu-container">
@@ -19,6 +19,7 @@
     <a class="site-nav__link" href="#">Контакти</a>
 </nav>
 
+    <div class="header__wrapper">
 <ul class="auth-nav">
     <li class="auth-nav__item">
     <a class="auth-nav__link" href="mailto:info@devstudio.com">
@@ -37,18 +38,26 @@
         +38 096 111 11 11
         </a>
     </li>  
-</ul> 
+</ul>
+
+<ul class="header__list">
+    <li class="header__item">Instagram</li>
+    <li class="header__item">Twitter</li>
+    <li class="header__item">Facebook</li>
+    <li class="header__item">LinkedIn</li>
+</ul>
+    </div>
 </div>
 
-<button class="header__btn menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"> 
+<button class="header__btn menu-btn js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu"> 
     <svg class="header__icon" width="40" height="40" aria-label="open menu">
-        <use class="menu-btn__menu js-open-menu" href="./images/icons.svg#icon-menu40px"></use>
+        <use class="menu-btn__menu" href="./images/icons.svg#icon-menu40px"></use>
         <use class="menu-btn__close js-close-menu" href="./images/icons.svg#icon-close40px"></use>
     </svg>
 </button>
     </div>
         
-    <div class="container header__box">
+    <div class="header__box">
 <a class="logo logo__header" href="index.html"><span class="logo__accent" >Web</span>Studio</a>
 
 <nav class="site-nav">
@@ -81,9 +90,9 @@
     </header>
 
 <!-- Main -->
-<!-- <main> -->
+<main>
 <!--Block hero-->
-<!-- <section class="hero">
+<section class="hero">
 <div class="container">
     <div class="hero__box">
 <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
@@ -151,7 +160,7 @@
 
     </div>
 </div>
-</section> -->
+</section>
 
 <!--Сriterion-->
 <!-- <section class="criteria section">
