@@ -3,20 +3,34 @@
 }
 
 .clientage__title {
+  @include font-style(var(--main-font), 700, 28px, 1.18, 0.03em);
   text-align: center;
-  margin-bottom: 50px;  
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
+  margin-bottom: 30px; 
+  
+  @media screen and (min-width: $desktop) {
+  @include font-style(var(--main-font), 700, 36px, 1.16, 0.03em);
+  margin-bottom: 50px; 
+  }
 }
 
 .clientage-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @media screen and (min-width: $desktop) {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+  }
 }
 
 .clientage-list__item:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 0;
+
+  @media screen and (min-width: $desktop) {
+  margin-right: 30px;  
+  }
 }
 
 .clientage-list__link {
@@ -25,9 +39,14 @@
   align-items: center;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
-  width: 170px;
+  width: 210px;
   height: 92px;
   fill: var(--icons-color);
+
+  @media screen and (min-width: $desktop) {
+  width: 170px;
+  height: 92px;
+  }
 
   transition-property: border-color;
   transition-duration: 250ms;
