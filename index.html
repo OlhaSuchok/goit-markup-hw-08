@@ -52,9 +52,9 @@
 <button class="header__btn menu-btn js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu"> 
     <svg class="header__icon" width="40" height="40" aria-label="open menu">
         <use class="menu-btn__menu" href="./images/icons.svg#icon-menu40px"></use>
-        <use class="menu-btn__close js-close-menu" href="./images/icons.svg#icon-close40px"></use>
     </svg>
 </button>
+
     </div>
         
     <div class="header__box">
@@ -216,17 +216,26 @@
         <h2 class="functions__title">Чим ми займаємося</h2>
         <ul class="functions__list">
     <li class="functions__item">
-<img class="functions__image" src="./images/img1.jpg" alt="Someone is typing on the keyboard with both hands" width="370" height="294">
+<picture class="functions__picture">
+    <source class="functions__source"srcset="./images/img5@1x-1200.jpg 1x, ./images/img5@2x-1200.jpg 2x" media="(min-width: 1200.98px)"/>
+    <img class="functions__image" src="./images/img5@1x-1200.jpg" alt="Someone is typing on the keyboard with both hands">
+</picture>        
 <h3 class="functions__text">Десктопні додатки</h3>
     </li>
 
     <li class="functions__item">
-<img class="functions__image" src="./images/img2.jpg" alt="Someone is holding a phone in his left hand" width="370" height="294">
+<picture class="functions__picture">
+    <source class="functions__source"srcset="./images/img6@1x-1200.jpg 1x, ./images/img6@2x-1200.jpg 2x" media="(min-width: 1200.98px)"/>
+    <img class="functions__image" src="./images/img6@1x-1200.jpg" alt="Someone is holding a phone in his left hand">
+</picture>        
 <h3 class="functions__text">Мобільні додатки</h3>
     </li>
 
     <li class="functions__item">
-<img class="functions__image" src="./images/img3.jpg" alt="Someone is holding a map-board in his left hand, and a pen in his right hand" width="370" height="294">
+<picture class="functions__picture">
+    <source class="functions__source"srcset="./images/img7@1x-1200.jpg 1x, ./images/img7@2x-1200.jpg 2x" media="(min-width: 1200.98px)"/>
+    <img class="functions__image" src="./images/img7@1x-1200.jpg" alt="Someone is holding a map-board in his left hand, and a pen in his right hand">
+</picture>         
 <h3 class="functions__text">Дизайнерські рішення</h3>
     </li>
         </ul>
