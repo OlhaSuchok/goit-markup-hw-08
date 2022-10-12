@@ -1415,8 +1415,6 @@ body {
 
 .clientage-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
 }
 
 @media screen and (max-width: 768.97px) {
