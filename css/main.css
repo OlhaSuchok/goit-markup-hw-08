@@ -429,6 +429,7 @@ body {
     position: relative;
     padding-top: 32px;
     padding-bottom: 32px;
+    margin-bottom: 0;
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1691,6 +1692,7 @@ body {
 }
 @media screen and (min-width: 1200.98px) {
   .button-list {
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
@@ -1698,12 +1700,15 @@ body {
   }
 }
 
-.button-list__item:not(:last-child) {
-  margin-right: 8px;
-  margin-bottom: 15px;
+@media screen and (max-width: 480.98px) {
+  .button-list__item:not(:last-child) {
+    margin-right: 8px;
+    margin-bottom: 15px;
+  }
 }
 @media screen and (min-width: 1200.98px) {
   .button-list__item:not(:last-child) {
+    margin-right: 8px;
     margin-bottom: 0;
   }
 }
@@ -1882,6 +1887,7 @@ body {
   height: 100%;
   background-color: #fff;
   padding: 48px 40px;
+  z-index: 1;
 }
 
 body.scroll-lock {
