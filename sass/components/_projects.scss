@@ -3,35 +3,41 @@
 }
 
 .projects__title {
+  @include font-style(var(--main-font), 700, 36px, 1.16, 0.03em);
   text-align: center;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
 }
 
 .button-list {
   display: flex;
   align-items: center;
-  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $desktop) {
+  align-items: center;
+  justify-content: center;  
+  flex-wrap: nowrap;
   margin-bottom: 50px;
+  }
 }
 
 .button-list__item:not(:last-child) {
   margin-right: 8px;
+  margin-bottom: 15px;
+
+  @media screen and (min-width: $desktop) {
+  margin-bottom: 0;
+  }
 }
 
 .button-list__button {
+  @include font-style(var(--main-font), 500, 16px, 1.6, 0.03em);
   padding: 6px 22px;
   border-radius: 4px;
   text-align: center;
   color: var(--main-color);
   background-color: var(--third-color);
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-  letter-spacing: 0.03em;
 
   transition-property: color, background-color, box-shadow;
   transition-duration: 250ms, 250ms, 250ms;
@@ -46,9 +52,12 @@
 }
 
 .projects-list {
+
+  @media screen and (min-width: $desktop) {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  }
 }
 
 .projects-list__item {
@@ -106,12 +115,9 @@
 }
 
 .projects-list__text-navigation {
+  @include font-style(var(--main-font), 400, 18px, 1.6, 0.03em);
   padding: 63px 24px;
   color: var(--accent-color);
-
-  font-size: 18px;
-  line-height: 1.6;
-  letter-spacing: 0.03em;
 }
 
 .projects-list__border {
@@ -121,16 +127,10 @@
 }
 
 .projects-list__subtitle {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
+  @include font-style(var(--main-font), 700, 18px, 2, 0.06em);
 }
 
 .projects-list__text {
+  @include font-style(var(--main-font), 400, 16px, 1.9, 0.03em); 
   color: var(--secondary-color);
-  
-  font-size: 16px;
-  line-height: 1.9;
-  letter-spacing: 0.03em;
 }
