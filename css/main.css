@@ -1413,19 +1413,37 @@ body {
   }
 }
 
-.clientage-list {
-  display: flex;
+@media screen and (max-width: 768.97px) {
+  .clientage-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200.98px) {
+  .clientage-list {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 768.97px) {
+  .clientage-list__item:nth-child(odd) {
+    margin-right: 30px;
+  }
 }
 
 @media screen and (max-width: 768.97px) {
   .clientage-list__item {
-    flex-basis: calc((100% - 30px) / 2);
+    margin-bottom: 30px;
   }
 }
 
-.clientage-list__item:not(:last-child) {
-  margin-right: 0;
+@media screen and (max-width: 768.97px) {
+  .clientage-list__item:nth-last-child(-n+2) {
+    margin-bottom: 0px;
+  }
 }
+
 @media screen and (min-width: 1200.98px) {
   .clientage-list__item:not(:last-child) {
     margin-right: 30px;
