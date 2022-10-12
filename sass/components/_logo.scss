@@ -35,4 +35,8 @@
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+
+  @media screen and (max-width: 768.97px) {
+    margin-bottom: 20px;
+  }
 }
