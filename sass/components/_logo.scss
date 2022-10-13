@@ -42,15 +42,19 @@
   }
 }
 
-.logo__footer  {
+.logo__footer {
   color: var(--accent-color);  
-  font-family: var(--secondary-font);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
 
-  @media screen and (max-width: 768.97px) {
+  @media screen and (max-width: $pretablet) {
+     @include font-style(var(--secondary-font), 700, 24px, 1.17, 0.03em); 
     margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
+     @include font-style(var(--secondary-font), 700, 24px, 1.17, 0.03em); 
+  }
+
+  @media screen and (min-width: $desktop)  {
+  @include font-style(var(--secondary-font), 700, 26px, 1.19, 0.03em);
   }
 }
