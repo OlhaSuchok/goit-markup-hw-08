@@ -69,11 +69,7 @@
 
 .team__picture {
   display: block;
-
-  @media screen and (max-width: $predesktop) {
   margin-bottom: 30px;
-  }
-
 }
 
 .team__text {
