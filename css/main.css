@@ -761,87 +761,50 @@ picture img {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .hero {
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-Img.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: #2f303a;
-  }
-}
-@media screen and (min-width: 768px) {
-  .hero {
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-Img.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: #2f303a;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .hero {
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-Img.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: #2f303a;
-  }
-}
-
 .hero {
   max-width: 100%;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-Img.jpg");
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
+  background-color: #2f303a;
 }
 @media screen and (max-width: 767px) {
   .hero {
-    background-image: url("../images/hero@1x-480.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero@1x-480.jpg");
     height: 400px;
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: url("../images/hero@1x-768.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero@1x-768.jpg");
     height: 400px;
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    background-image: url("../images/hero@1x-1200.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero@1x-1200.jpg");
     height: 600px;
   }
 }
 
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (--webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../images/hero@2x-480.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero@1x-480.jpg");
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (--webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-o-min-device-pixel-ratio: 2/1), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../images/hero@2x-768.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero@1x-768.jpg");
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (--webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-o-min-device-pixel-ratio: 2/1), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../images/hero@2x-1200.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero@1x-1200.jpg");
   }
 }
 @media screen and (max-width: 768.97px) {
