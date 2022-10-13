@@ -215,11 +215,19 @@
   @media screen and (min-width: $tablet) {
    padding-top: 21px; 
   }
+
+  @media screen and (min-width: $desktop) {
+  padding-top: 32px; 
+  }
 }
 
   &:last-child {
   @media screen and (min-width: $tablet) {
    padding-bottom: 21px; 
+  }
+
+  @media screen and (min-width: $desktop) {
+  padding-bottom: 32px; 
   }
 }
 
