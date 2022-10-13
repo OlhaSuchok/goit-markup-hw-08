@@ -367,7 +367,7 @@ picture img {
 }
 
 .header {
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
   background-color: var(--accent-color);
 }
 
@@ -395,7 +395,13 @@ picture img {
 }
 
 .site-nav__link {
-  transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 @media screen and (max-width: 767px) {
   .site-nav__link {
@@ -406,29 +412,16 @@ picture img {
     letter-spacing: 0.02em;
     margin-bottom: 32px;
     padding-top: 0;
-    position: relative;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .site-nav__link {
-    font-family: var(--main-font);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    position: relative;
     padding-top: 32px;
     padding-bottom: 31px;
   }
 }
 @media screen and (min-width: 1200px) {
   .site-nav__link {
-    font-family: var(--main-font);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    position: relative;
     padding-top: 32px;
     padding-bottom: 32px;
   }
@@ -475,31 +468,53 @@ picture img {
   color: var(--nav-color);
 }
 
-.site-nav__link::after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 4px;
-  left: 0;
-  bottom: 0;
-  margin-bottom: -1px;
-  border-radius: 4px;
-  background-color: #2196f3;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.site-nav__link--current::after {
-  width: 100%;
-}
-
-.site-nav__link:hover .site-nav__link:after,
+@media screen and (min-width: 768px) {
+  .site-nav__link::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    margin-bottom: -1px;
+    border-radius: 4px;
+    background-color: #2196f3;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .site-nav__link--current::after {
+    width: 100%;
+  }
+  .site-nav__link:hover .site-nav__link:after,
 .site-nav__link:focus .site-nav__link::after {
-  width: 100%;
+    width: 100%;
+  }
 }
-
+@media screen and (min-width: 768px) {
+  .site-nav__link::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    margin-bottom: -1px;
+    border-radius: 4px;
+    background-color: #2196f3;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .site-nav__link--current::after {
+    width: 100%;
+  }
+  .site-nav__link:hover .site-nav__link:after,
+.site-nav__link:focus .site-nav__link::after {
+    width: 100%;
+  }
+}
+.auth-nav {
+  display: flex;
+}
 @media screen and (max-width: 767px) {
   .auth-nav {
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 64px;
@@ -507,14 +522,12 @@ picture img {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .auth-nav {
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
 }
 @media screen and (min-width: 1200px) {
   .auth-nav {
-    display: flex;
     align-items: center;
     flex-direction: row;
   }
@@ -624,18 +637,22 @@ picture img {
 @media screen and (max-width: 767px) {
   .auth-nav__item:first-child {
     margin-bottom: 32px;
+    color: var(--nav-color);
+    font-family: var(--main-font);
     font-weight: 500;
     font-size: 34px;
-    line-height: 1.18;
-    color: var(--nav-color);
+    line-height: 1.17;
+    letter-spacing: 0.03em;
   }
 }
 @media screen and (max-width: 767px) {
   .auth-nav__item:last-child {
+    color: var(--secondary-color);
+    font-family: var(--main-font);
     font-weight: 500;
     font-size: 24px;
-    line-height: 1.17;
-    color: var(--secondary-color);
+    line-height: 1.16;
+    letter-spacing: 0.03em;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1225,6 +1242,7 @@ picture img {
 .functions__title {
   text-align: center;
   margin-bottom: 50px;
+  font-family: var(--main-font);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -1257,9 +1275,11 @@ picture img {
   text-transform: uppercase;
   color: var(--accent-color);
   background-color: rgba(47, 48, 58, 0.8);
+  font-family: var(--main-font);
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
 }
 
 .team {
