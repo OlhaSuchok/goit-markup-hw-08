@@ -4,11 +4,11 @@
 
 .criteria__list {
   display: flex;
+  justify-content: center;
 
   @media screen and (max-width: $pretablet) {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
   }
 
   @media screen and (min-width: $tablet) and (max-width: $predesktop) {
@@ -20,7 +20,7 @@
   }
 }
 
-  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
+@media screen and (min-width: $tablet) and (max-width: $predesktop) {
   .criteria__item {
     width: calc((100% - 30px) / 2);
     margin-bottom: 30px;
@@ -36,13 +36,13 @@
   }
 
   .criteria__item:nth-last-child(-n + 2) {
-  margin-bottom: 30px;
-}
+    margin-bottom: 30px;
+  }
 }
 
 .criteria__title {
   text-align: center;
-  @include font-style(var(--main-font), 700, 36px, 1.16, 0.03em); 
+  @include font-style(var(--main-font), 700, 36px, 1.16, 0.03em);
 }
 
 .criteria__image {
@@ -70,18 +70,10 @@
   @include font-style(var(--main-font), 700, 14px, 1.14, 0.03em);
   margin-bottom: 10px;
   text-transform: uppercase;
+  text-align: left;
 
   @media screen and (max-width: $pretablet) {
-    margin-bottom: 10px;
     text-align: center;
-  }
-
-  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
-    text-align: left;
-  }
-
-  @media screen and (min-width: $desktop) {
-    text-align: left;
   }
 }
 
