@@ -10,9 +10,17 @@
 .button-list {
   display: flex;
   align-items: center;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
+
+  @media screen and (max-width: $pretablet) {
+    max-width: 329px;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
+    margin-bottom: 30px;
+  }
 
   @media screen and (min-width: $desktop) {
     display: flex;
@@ -24,22 +32,36 @@
 }
 
 .button-list__item {
-    @media screen and (max-width: $pretablet) {
-margin-bottom: 15px;
-    }
+  @media screen and (max-width: $pretablet) {
+    margin-bottom: 15px;
+    margin-right: 8px;
+  }
 
-  @media screen and (min-width: $tablet) and (max-width: $predesktop){
-margin-bottom: 30px;
-    }
+  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
+    margin-bottom: 30px;
+  }
 
   @media screen and (min-width: $desktop) {
-margin-bottom: 0;
-    }
+    margin-bottom: 0;
+  }
 }
 
+@media screen and (max-width: $pretablet) {
+  .button-list__item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+
+  .button-list__item:nth-child(3) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: $tablet) {
 .button-list__item:not(:last-child) {
   margin-right: 8px;
 }
+} 
+
 
 .button-list__button {
   @include font-style(var(--main-font), 500, 16px, 1.6, 0.03em);
