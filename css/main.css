@@ -1209,6 +1209,13 @@ picture img {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .criteria__item {
+    width: calc((100% - 30px) / 2);
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .criteria__item:not(:last-child) {
     margin-bottom: 30px;
@@ -1225,6 +1232,11 @@ picture img {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .criteria__item:nth-last-child(-n+2) {
+    margin-right: 0;
+  }
+}
 .criteria__item:nth-last-child(-n+2) {
   margin-bottom: 30px;
 }
