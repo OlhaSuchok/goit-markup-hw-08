@@ -371,51 +371,31 @@ picture img {
   background-color: var(--accent-color);
 }
 
+.header__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media screen and (max-width: 767px) {
   .header__box {
     display: none;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .header__box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .header__box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
 
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @media screen and (max-width: 767px) {
   .site-nav {
-    display: flex;
     flex-direction: column;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .site-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .site-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
   }
 }
 
 .site-nav__link {
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (max-width: 767px) {
   .site-nav__link {
@@ -495,75 +475,28 @@ picture img {
   color: var(--nav-color);
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .site-nav__link::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 4px;
-    left: 0;
-    bottom: 0;
-    margin-bottom: -1px;
-    border-radius: 4px;
-    background-color: #2196f3;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .site-nav__link--current::after {
-    width: 100%;
-  }
-  .site-nav__link:hover .site-nav__link:after,
-.site-nav__link:focus .site-nav__link::after {
-    width: 100%;
-  }
+.site-nav__link::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  margin-bottom: -1px;
+  border-radius: 4px;
+  background-color: #2196f3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (min-width: 1200px) {
-  .site-nav__link::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 4px;
-    left: 0;
-    bottom: 0;
-    margin-bottom: -1px;
-    border-radius: 4px;
-    background-color: #2196f3;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .site-nav__link--current::after {
-    width: 100%;
-  }
-  .site-nav__link:hover .site-nav__link:after,
-.site-nav__link:focus .site-nav__link::after {
-    width: 100%;
-  }
+
+.site-nav__link--current::after {
+  width: 100%;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .site-nav__link::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 4px;
-    left: 0;
-    bottom: 0;
-    margin-bottom: -1px;
-    border-radius: 4px;
-    background-color: #2196f3;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .site-nav__link--current::after {
-    width: 100%;
-  }
-  .site-nav__link:hover .site-nav__link:after,
+
+.site-nav__link:hover .site-nav__link:after,
 .site-nav__link:focus .site-nav__link::after {
-    width: 100%;
-  }
+  width: 100%;
 }
+
 @media screen and (max-width: 767px) {
   .auth-nav {
     display: flex;
@@ -670,9 +603,7 @@ picture img {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -680,9 +611,7 @@ picture img {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -788,24 +717,15 @@ picture img {
 
 .logo__footer {
   color: var(--accent-color);
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
 }
 @media screen and (max-width: 767px) {
   .logo__footer {
-    font-family: var(--secondary-font);
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
     margin-bottom: 20px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .logo__footer {
-    font-family: var(--secondary-font);
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -891,24 +811,11 @@ picture img {
   margin-bottom: 30px;
   text-transform: uppercase;
   color: var(--accent-color);
-}
-@media screen and (max-width: 767px) {
-  .hero__title {
-    font-family: var(--main-font);
-    font-weight: 900;
-    font-size: 26px;
-    line-height: 1.6;
-    letter-spacing: 0.06em;
-  }
-}
-@media screen and (min-width: 768px) {
-  .hero__title {
-    font-family: var(--main-font);
-    font-weight: 900;
-    font-size: 26px;
-    line-height: 1.6;
-    letter-spacing: 0.06em;
-  }
+  font-family: var(--main-font);
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
@@ -920,6 +827,13 @@ picture img {
   }
 }
 
+.button__hero {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button__hero:hover, .button__hero:focus {
+  color: var(--main-color);
+  background-color: var(--third-color);
+}
 @media screen and (max-width: 767px) {
   .button__hero {
     padding-left: 24px;
@@ -930,26 +844,12 @@ picture img {
   .button__hero {
     padding-left: 32px;
     padding-right: 32px;
-    transition-property: color, background-color;
-    transition-duration: 250ms, 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .button__hero:hover, .button__hero:focus {
-    color: var(--main-color);
-    background-color: var(--third-color);
   }
 }
 @media screen and (min-width: 1200px) {
   .button__hero {
     padding-left: 32px;
     padding-right: 32px;
-    transition-property: color, background-color;
-    transition-duration: 250ms, 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .button__hero:hover, .button__hero:focus {
-    color: var(--main-color);
-    background-color: var(--third-color);
   }
 }
 
@@ -1035,9 +935,7 @@ picture img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal__knob:hover, .modal__knob:focus {
   fill: var(--nav-color);
@@ -1084,9 +982,7 @@ picture img {
   top: 50%;
   left: 15px;
   transform: translateY(-50%);
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form__input {
@@ -1099,9 +995,7 @@ picture img {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__input:hover, .form__input:focus {
   border-color: var(--nav-color);
@@ -1126,9 +1020,7 @@ picture img {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__textarea:hover, .form__textarea:focus {
   border-color: var(--nav-color);
@@ -1184,9 +1076,7 @@ picture img {
   opacity: 0;
   fill: var(--accent-color);
   border-radius: 2px;
-  transition-property: opacity;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .privacy__text {
@@ -1513,9 +1403,7 @@ picture img {
   height: 44px;
   background-color: var(--accent-color);
   fill: var(--icons-color);
-  transition-property: fill, background-color;
-  transition-duration: 250ms, 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icons-list__link:hover, .icons-list__link:focus {
   fill: var(--accent-color);
@@ -1615,9 +1503,7 @@ picture img {
   border-radius: 4px;
   height: 92px;
   fill: var(--icons-color);
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 1200px) {
   .clientage-list__link {
@@ -1633,9 +1519,7 @@ picture img {
   padding: 0;
   width: 106px;
   height: 60px;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer {
@@ -1714,9 +1598,7 @@ picture img {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-addres__link:hover, .footer-addres__link:focus {
   color: var(--nav-color);
@@ -1834,9 +1716,7 @@ picture img {
   outline: transparent;
   background-color: #2F303A;
   color: rgba(255, 255, 255, 0.6);
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-subscription__input {
@@ -1912,6 +1792,7 @@ picture img {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .button-list {
     margin-bottom: 30px;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1921,6 +1802,7 @@ picture img {
     justify-content: center;
     flex-wrap: nowrap;
     margin-bottom: 50px;
+    justify-content: center;
   }
 }
 
@@ -1965,9 +1847,7 @@ picture img {
   text-align: center;
   color: var(--main-color);
   background-color: var(--third-color);
-  transition-property: color, background-color, box-shadow;
-  transition-duration: 250ms, 250ms, 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-list__button:hover, .button-list__button:focus {
   color: var(--accent-color);
@@ -1990,9 +1870,7 @@ picture img {
 }
 
 .projects-list__item {
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-list__item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -2056,9 +1934,7 @@ picture img {
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(101%);
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-list__text-navigation {
@@ -2095,6 +1971,11 @@ picture img {
 }
 
 .button {
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -2102,10 +1983,6 @@ picture img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: var(--accent-color);
   background-color: var(--nav-color);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9;
-  letter-spacing: 0.06em;
 }
 
 .header__mobile {

@@ -4,46 +4,28 @@
 }
 
 .header__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   @media screen and (max-width: $pretablet) {
   display: none;
   } 
-
-  @media screen and (min-width: $tablet) and (max-width: $predesktop){
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  }
-
-  @media screen and (min-width: $desktop) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  }
 }
 
 .site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   @media screen and (max-width: $pretablet) {
-    display: flex;
     flex-direction: column;
-  }
-
-  @media screen and (min-width: $tablet) and (max-width: $predesktop){
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  }
-
-  @media screen and (min-width: $desktop) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    align-items: flex-start;
   }
 }
 
-.site-nav__link {
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+.site-nav__link {  
+  transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media screen and (max-width: $pretablet) {
   @include font-style(var(--main-font), 500, 40px, 1.2, 0.02em);   
@@ -104,7 +86,6 @@
   color: var(--nav-color);
 }
 
-  @media screen and (min-width: $tablet) and (max-width: $predesktop){
   .site-nav__link::after {
   position: absolute;
   content: "";
@@ -115,10 +96,8 @@
   margin-bottom: -1px;
   border-radius: 4px;
   background-color: #2196f3;
-  
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .site-nav__link--current::after {
@@ -129,61 +108,7 @@
 .site-nav__link:focus .site-nav__link::after {
   width: 100%;
   }
-}
 
- @media screen and (min-width: $desktop) {
-  .site-nav__link::after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 4px;
-  left: 0;
-  bottom: 0;
-  margin-bottom: -1px;
-  border-radius: 4px;
-  background-color: #2196f3;
-  
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .site-nav__link--current::after {
-  width: 100%;
-  } 
-
-.site-nav__link:hover .site-nav__link:after,
-.site-nav__link:focus .site-nav__link::after {
-  width: 100%;
-  }
-}
-
-  @media screen and (min-width: $tablet) and (max-width: $predesktop){
-  .site-nav__link::after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 4px;
-  left: 0;
-  bottom: 0;
-  margin-bottom: -1px;
-  border-radius: 4px;
-  background-color: #2196f3;
-  
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .site-nav__link--current::after {
-  width: 100%;
-  } 
-
-.site-nav__link:hover .site-nav__link:after,
-.site-nav__link:focus .site-nav__link::after {
-  width: 100%;
-  }
-}
 
 .auth-nav {
   @media screen and (max-width: $pretablet) {
@@ -278,9 +203,7 @@
   justify-content: center;
   align-items: center;
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   @media screen and (min-width: $desktop) {
@@ -288,9 +211,7 @@
   justify-content: center;
   align-items: center;
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 } 
 

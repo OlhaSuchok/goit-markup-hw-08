@@ -75,9 +75,7 @@
   line-height: 1.7;
   letter-spacing: 0.03em;
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
@@ -192,9 +190,7 @@
 
   color: rgba(255, 255, 255, 0.6);
 
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @media screen and (min-width: $tablet) and (max-width: $predesktop) {
       width: 450px;
