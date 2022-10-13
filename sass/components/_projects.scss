@@ -58,7 +58,7 @@
   }
 }
 
-@media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
 .button-list__item:not(:last-child) {
   margin-right: 8px;
 }

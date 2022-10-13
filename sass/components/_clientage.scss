@@ -42,7 +42,7 @@
   }
 }
 
-@media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
   .clientage-list__item:not(:nth-child(3n)) {
     margin-right: 30px;
   }

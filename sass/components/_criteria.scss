@@ -3,54 +3,46 @@
 }
 
 .criteria__list {
+  display: flex;
+
   @media screen and (max-width: $pretablet) {
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  @media screen and (min-width: $tablet) {
-    display: flex;
+  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
     flex-wrap: wrap;
   }
 
   @media screen and (min-width: $desktop) {
-    display: flex;
     flex-wrap: nowrap;
   }
 }
 
-.criteria__item {
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
+  .criteria__item {
     width: calc((100% - 30px) / 2);
     margin-bottom: 30px;
   }
-}
-
-.criteria__item:not(:last-child) {
-  @media screen and (max-width: $pretablet) {
-    margin-bottom: 30px;
-  }
-
-  @media screen and (min-width: $desktop) {
+  .criteria__item:nth-child(odd) {
     margin-right: 30px;
   }
 }
 
-.criteria__item:nth-child(odd) {
-  @media screen and (min-width: $tablet) {
+@media screen and (min-width: $desktop) {
+  .criteria__item:not(:last-child) {
     margin-right: 30px;
   }
-}
 
-.criteria__item:nth-last-child(-n + 2) {
+  .criteria__item:nth-last-child(-n + 2) {
   margin-bottom: 30px;
+}
 }
 
 .criteria__title {
-  @include font-style(var(--main-font), 700, 36px, 1.16, 0.03em);
   text-align: center;
+  @include font-style(var(--main-font), 700, 36px, 1.16, 0.03em); 
 }
 
 .criteria__image {
@@ -84,7 +76,7 @@
     text-align: center;
   }
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
     text-align: left;
   }
 

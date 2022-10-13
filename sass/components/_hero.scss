@@ -84,7 +84,7 @@
   max-width: 360px;
   }  
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
   margin: 0 auto;
   max-width: 360px;
   }  
@@ -120,7 +120,7 @@
   padding-right: 24px;
   }
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
   padding-left: 32px;
   padding-right: 32px;
   }
