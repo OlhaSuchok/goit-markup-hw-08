@@ -14,12 +14,18 @@
    <div class="header__mobile">
 <a class="logo logo__header" href="index.html"><span class="logo__accent" >Web</span>Studio</a>
 
-<div class="header__nav mobile-menu js-menu-container">
+<div class="header__nav js-menu-container">
 <nav class="site-nav">
     <a class="site-nav__link" href="index.html">Студія</a>
     <a class="site-nav__link site-nav__link--current" href="./portfolio.html">Портфоліо</a>
     <a class="site-nav__link" href="#">Контакти</a>
 </nav>
+
+<button class="header__close" type="button"> 
+    <svg class="header__icon" width="40" height="40">
+        <use class="menu-btn__close js-close-menu" href="./images/icons.svg#icon-close40px"></use>
+    </svg>
+</button>
 
     <div class="header__wrapper">
 <ul class="auth-nav">
@@ -51,12 +57,12 @@
     </div>
 </div>
 
-<button class="header__btn menu-btn js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu"> 
+<button class="header__open js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu"> 
     <svg class="header__icon" width="40" height="40" aria-label="open menu">
         <use class="menu-btn__menu" href="./images/icons.svg#icon-menu40px"></use>
-        <use class="menu-btn__close js-close-menu" href="./images/icons.svg#icon-close40px"></use>
     </svg>
 </button>
+
     </div>
         
     <div class="header__box">

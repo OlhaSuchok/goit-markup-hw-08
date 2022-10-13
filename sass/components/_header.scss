@@ -337,3 +337,14 @@
   fill: currentColor;
   }
 }
+
+  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
+    .auth-nav__icon--envelope {
+      width: 14px;
+      height: 10px;
+    }
+    .auth-nav__icon--smartphone {
+      width: 10px;
+      height: 14px;
+    }
+  }
