@@ -4,7 +4,7 @@
 }
 
 .header__box {
-  @media screen and (max-width: $tablet) {
+  @media screen and (max-width: $pretablet) {
   display: none;
   } 
 
@@ -22,7 +22,7 @@
 }
 
 .site-nav {
-  @media screen and (max-width: 768.97px) {
+  @media screen and (max-width: $pretablet) {
     display: flex;
     flex-direction: column;
   }
@@ -30,6 +30,7 @@
   @media screen and (min-width: $tablet) {
   display: flex;
   align-items: center;
+  justify-content: center;
   }
 
   @media screen and (min-width: $desktop) {
@@ -40,20 +41,22 @@
 }
 
 .site-nav__link {
-  @include font-style(var(--main-font), 500, 40px, 1.18, 0.02em);
-  padding: 0;
+  @media screen and (max-width: $pretablet) {
+  @include font-style(var(--main-font), 500, 40px, 1.2, 0.02em);   
   margin-bottom: 32px;
+  padding-top: 0;
+  position: relative;
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+  }
 
   @media screen and (min-width: $tablet) {
   @include font-style(var(--main-font), 500, 14px, 1.14, 0.02em);  
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
-  margin-bottom: 0;
 
   transition-property: color;
   transition-duration: 250ms;
@@ -73,7 +76,7 @@
 }
 
 .site-nav__link:not(:last-child) {
-  @media screen and (max-width: 768.97px) {
+  @media screen and (max-width: $pretablet) {
   margin-right: 0;
   }
 
@@ -82,21 +85,21 @@
   }
 
   @media screen and (min-width: $desktop) {
-  margin-right: 50px; 
+  margin-right: 51px; 
   }
 }
 
 .site-nav__link:last-child {
-  @media screen and (max-width: 768.97px) {
+  @media screen and (max-width: $pretablet) {
   margin-right: 0;
 }
 
   @media screen and (min-width: $tablet) {
-  margin-right: 318px;
+  margin-right: 96px;
   }
 
   @media screen and (min-width: $desktop) {
-  margin-right: 318px;
+  margin-right: 315px;
   }
 }
 
@@ -164,7 +167,7 @@
 }
 
 .auth-nav {
-  @media screen and (max-width: 768.97px) {
+  @media screen and (max-width: $pretablet) {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -173,28 +176,28 @@
 
   @media screen and (min-width: $tablet) {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   }
 
   @media screen and (min-width: $desktop) {
   display: flex;
   align-items: center;
+  flex-direction: row;
   }
 }
 
 .auth-nav__item {
-  @media screen and (max-width: 768.97px) {
+  @media screen and (max-width: $pretablet) {
   padding: 0;
   margin-right: 0;
   }
 
   @media screen and (min-width: $tablet) {
-  @include font-style(var(--main-font), 500, 14px, 1.14, 0.02em);  
+  @include font-style(var(--main-font), 500, 12px, 1.17, 0.02em);  
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: var(--secondary-color);
   }
 
@@ -208,23 +211,36 @@
   color: var(--secondary-color);
   }
 
+  &:first-child {
+  @media screen and (min-width: $tablet) {
+   padding-top: 21px; 
+  }
+}
+
+  &:last-child {
+  @media screen and (min-width: $tablet) {
+   padding-bottom: 21px; 
+  }
+}
+
   &:not(:last-child) {
-  @media screen and (max-width: 768.97px) {
+  @media screen and (max-width: $pretablet) {
   margin-right: 0;
   }  
 
   @media screen and (min-width: $tablet) {
-  margin-right: 30px;
+  margin-bottom: 10px;
   }
 
   @media screen and (min-width: $desktop) {
   margin-right: 30px;
+  margin-bottom: 0;
   }
   }
 }
 
 .auth-nav__link {
-  @media screen and (max-width: 768.97px) {
+  @media screen and (max-width: $pretablet) {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -257,7 +273,7 @@
   fill: var(--nav-color);
   }
 
-  @media screen and (max-width: 768.97px) {
+  @media screen and (max-width: $pretablet) {
   .auth-nav__item:first-child {
   margin-bottom: 32px;
 
@@ -268,7 +284,7 @@
 }
 }
 
-  @media screen and (max-width: 768.97px) {
+  @media screen and (max-width: $pretablet) {
   .auth-nav__item:last-child {
   font-weight: 500;
   font-size: 24px;
@@ -278,7 +294,7 @@
   }
 
 .auth-nav__icon {
-  @media screen and (max-width: 768.97px) {
+  @media screen and (max-width: $pretablet) {
     display: none;
 }
 
