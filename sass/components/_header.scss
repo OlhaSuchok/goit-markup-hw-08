@@ -41,15 +41,15 @@
 }
 
 .site-nav__link {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+
   @media screen and (max-width: $pretablet) {
   @include font-style(var(--main-font), 500, 40px, 1.2, 0.02em);   
   margin-bottom: 32px;
   padding-top: 0;
   position: relative;
-
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
   }
 
   @media screen and (min-width: $tablet) {
@@ -57,10 +57,6 @@
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
-
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   @media screen and (min-width: $desktop) {
@@ -68,10 +64,6 @@
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
-
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -166,6 +158,33 @@
   }
 }
 
+ @media screen and (min-width: $tablet) {
+  .site-nav__link::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  margin-bottom: -2px;
+  border-radius: 4px;
+  background-color: #2196f3;
+  
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .site-nav__link--current::after {
+  width: 100%;
+  } 
+
+.site-nav__link:hover .site-nav__link:after,
+.site-nav__link:focus .site-nav__link::after {
+  width: 100%;
+  }
+}
+
 .auth-nav {
   @media screen and (max-width: $pretablet) {
   display: flex;
@@ -223,7 +242,7 @@
 
   &:last-child {
   @media screen and (min-width: $tablet) {
-   padding-bottom: 21px; 
+   padding-bottom: 20px; 
   }
 
   @media screen and (min-width: $desktop) {
