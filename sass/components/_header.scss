@@ -113,6 +113,7 @@
 
   @media screen and (max-width: $pretablet) {
     margin-bottom: 64px;
+    flex-wrap: wrap;
   }
 
   @media screen and (min-width: $desktop) {
@@ -192,7 +193,6 @@
 
 @media screen and (max-width: $pretablet) {
   .auth-nav__item:first-child {
-    // margin-bottom: 32px;
     color: var(--secondary-color);
     @include font-style(var(--main-font), 500, 24px, 1.17, 0.02em);
     order: 2;
@@ -206,6 +206,12 @@
     @include font-style(var(--main-font), 500, 34px, 1.18, 0.02em);
   }
 }
+
+  @media screen and (max-width: $premobile) {
+  .auth-nav__item:last-child {
+    @include font-style(var(--main-font), 500, 26px, 1.18, 0.02em);
+  } 
+  }
 
 .auth-nav__icon {
   @media screen and (max-width: $pretablet) {

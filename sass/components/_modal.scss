@@ -36,12 +36,8 @@
   transition: transform 250ms linear;
 
   @media screen and (max-width: $predesktop) {
-    min-width: 450px;
-    min-height: 609px;
-  }
-
-  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
-    min-width: 450px;
+    max-width: 450px;
+    width: 100%;
     min-height: 609px;
   }
 
