@@ -1,8 +1,8 @@
 .footer {
+  @include display-style(flex, center, center);
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
-  display: flex;
 
   @media screen and (min-width: $tablet) and (max-width: $predesktop) {
     align-items: baseline;
@@ -105,8 +105,7 @@
 }
 
 .icons-list {
-  display: flex;
-  justify-content: center;
+  @include display-style(flex, center, center);
 }
 
 .icons-list__link--color {
@@ -131,23 +130,24 @@
   }
 
   @media screen and (min-width: $desktop) {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    @include display-style(flex, center, flex-start);
     flex-direction: row;
   }
 }
 
 .footer-subscription__form {
-  display: flex;
+  @include display-style(flex, center, center);
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    align-items: flex-start;
+  }
 }
 
 .footer-subscription__text {
   @include font-style(var(--main-font), 700, 14px, 1.14, 0.03em);
-  display: block;
+  @include display-style(block, center, center);
+
   text-align: center;
   padding: 0;
   margin-bottom: 20px;
@@ -199,9 +199,7 @@
 }
 
 .button-mr {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include display-style(flex, center, center);
   padding-left: 31px;
   padding-right: 28px;
   border-radius: 4px;

@@ -13,64 +13,62 @@
   z-index: 1;
 
   &.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   &.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.6);
+    transform: translate(-50%, -50%) scale(0.6);
   }
 }
 
 .modal {
-  @media screen and (max-width: 768.97px) {
   position: absolute;
   top: 50%;
   left: 50%;
   border-radius: 4px;
   background-color: var(--accent-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms linear;
 
   @media screen and (max-width: $predesktop) {
-  min-width: 450px;
-  min-height: 609px;
+    min-width: 450px;
+    min-height: 609px;
   }
 
   @media screen and (min-width: $tablet) and (max-width: $predesktop) {
-  min-width: 450px;
-  min-height: 609px;
+    min-width: 450px;
+    min-height: 609px;
   }
 
   @media screen and (min-width: $desktop) {
-  min-width: 528px;
-  min-height: 581px;
-  }
+    min-width: 528px;
+    min-height: 581px;
   }
 
   @media screen and (min-width: $desktop) {
     position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 528px;
-  min-height: 581px;
-  border-radius: 4px;
-  background-color: var(--accent-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    top: 50%;
+    left: 50%;
+    min-width: 528px;
+    min-height: 581px;
+    border-radius: 4px;
+    background-color: var(--accent-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
 
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms linear;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms linear;
   }
 }
 
-  .modal__knob {
+.modal__knob {
+  @include display-style(flex, center, center);
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 0;
   top: 8px;
   right: 8px;
@@ -83,17 +81,15 @@
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-
   &:hover,
   &:focus {
-  fill: var(--nav-color);
+    fill: var(--nav-color);
   }
 }
 
 .form {
-  display: flex;
+  @include display-style(flex, center, center);
   flex-direction: column;
-  align-items: center;
   padding: 40px;
 }
 
@@ -102,12 +98,8 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  color:  var(--main-color);
-
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.03em;
+  color: var(--main-color);
+  @include font-style(var(--main-font), 700, 20px, 1.15, 0.03em);
 }
 
 .form__lable {
@@ -115,11 +107,8 @@
   align-self: flex-start;
   text-align: left;
   margin-bottom: 4px;
-  color:  var(--secondary-color);
-
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
+  color: var(--secondary-color);
+  @include font-style(var(--main-font), 400, 12px, 1.17, 0.01em);
 }
 
 .form__field {
@@ -133,7 +122,7 @@
   top: 50%;
   left: 15px;
   transform: translateY(-50%);
-  
+
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -144,15 +133,11 @@
   border-radius: 4px;
   color: var(--secondary-color);
   outline: transparent;
-
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-
+  @include font-style(var(--main-font), 700, 12px, 1.17, 0.01em);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
-  &:focus  {
+  &:focus {
     border-color: var(--nav-color);
   }
 
@@ -175,30 +160,23 @@
   border-radius: 4px;
   outline: transparent;
   color: rgba(117, 117, 117, 0.5);
-
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-
+  @include font-style(var(--main-font), 700, 12px, 1.17, 0.01em);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
-  border-color: var(--nav-color);
+    border-color: var(--nav-color);
   }
 
   &::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
+    color: rgba(117, 117, 117, 0.5);
+  }
 
   &::placeholder {
-  display: block;
-  align-self: flex-start;
-  text-align: left;
-
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
+    display: block;
+    align-self: flex-start;
+    text-align: left;
+    @include font-style(var(--main-font), 700, 12px, 1.17, 0.01em);
   }
 }
 
@@ -218,23 +196,19 @@
   margin-bottom: 30px;
 
   @media screen and (min-width: $desktop) {
-  padding-left: 13px;
+    padding-left: 13px;
   }
 }
 
 .privacy__mark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include display-style(flex, center, center);
   width: 16px;
   height: 15px;
   margin-right: 7px;
   border: 2px solid var(--main-color);
   border-radius: 2px;
 
-  transition-property: border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .privacy__icon {
@@ -242,7 +216,7 @@
   fill: var(--accent-color);
   border-radius: 2px;
 
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .privacy__text {
@@ -251,7 +225,7 @@
   text-align: center;
 
   @media screen and (min-width: $desktop) {
-  @include font-style(var(--main-font), 400, 14px, 1.9, 0.03em);
+    @include font-style(var(--main-font), 400, 14px, 1.9, 0.03em);
   }
 }
 

@@ -42,7 +42,7 @@
   }
 }
 
-  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
+@media screen and (min-width: $tablet) and (max-width: $predesktop) {
   .clientage-list__item:not(:nth-child(3n)) {
     margin-right: 30px;
   }
@@ -64,9 +64,8 @@
 }
 
 .clientage-list__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include display-style(flex, center, center);
+
   border: 1px solid #afb1b8;
   border-radius: 4px;
   height: 92px;

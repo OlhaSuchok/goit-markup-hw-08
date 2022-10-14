@@ -46,9 +46,7 @@
 }
 
 .criteria__image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include display-style(flex, center, center);
   height: 120px;
   margin-bottom: 30px;
   background-color: var(--third-color);

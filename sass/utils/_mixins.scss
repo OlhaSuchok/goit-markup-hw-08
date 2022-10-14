@@ -6,7 +6,8 @@
     letter-spacing: $letter-spacing;
 }
 
-// @mixin transition($transition-duration, $transition-timing-function) {
-//     transition-duration: $transition-duration;
-//     transition-timing-function: $transition-timing-function;
-// }
+@mixin display-style($display, $justify-content, $align-items) {
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}

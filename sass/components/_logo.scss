@@ -1,19 +1,9 @@
 .logo {
   color: var(--logo-color);
-  font-family: var(--secondary-font);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+  @include font-style(var(--secondary-font), 700, 26px, 1.19, 0.03em);
 
   @media screen and (min-width: $tablet) and (max-width: $predesktop) {
-  font-size: 24px;
-  line-height: 1.17;
-  }
-
-  @media screen and (min-width: $desktop) {
-  font-size: 26px;
-  line-height: 1.19;
+  @include font-style(var(--secondary-font), 700, 24px, 1.17, 0.03em);
   }
 }
 
@@ -23,33 +13,33 @@
 
 .logo__header {
   @media screen and (max-width: $pretablet) {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  margin-right: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-right: 0;
   }
 
   @media screen and (min-width: $tablet) and (max-width: $predesktop) {
-  padding-top: 26px;
-  padding-bottom: 25px;
-  margin-right: 87px;
+    padding-top: 26px;
+    padding-bottom: 25px;
+    margin-right: 87px;
   }
 
   @media screen and (min-width: $desktop) {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-right: 93px;
   }
 }
 
 .logo__footer {
   color: var(--accent-color);
-  @include font-style(var(--secondary-font), 700, 24px, 1.17, 0.03em);   
+  @include font-style(var(--secondary-font), 700, 24px, 1.17, 0.03em);
 
   @media screen and (max-width: $pretablet) {
     margin-bottom: 20px;
   }
 
-  @media screen and (min-width: $desktop)  {
-  @include font-style(var(--secondary-font), 700, 26px, 1.19, 0.03em);
+  @media screen and (min-width: $desktop) {
+    @include font-style(var(--secondary-font), 700, 26px, 1.19, 0.03em);
   }
 }

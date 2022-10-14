@@ -8,35 +8,32 @@
 }
 
 .button-list {
-  display: flex;
-  align-items: center;
+  @include display-style(flex, center, center);
 
   @media screen and (max-width: $pretablet) {
-    max-width: 329px;
-    align-content: flex-start;
     flex-wrap: wrap;
+    justify-content: flex-start;
     margin-bottom: 40px;
+    max-width: 329px;
   }
 
   @media screen and (min-width: $tablet) and (max-width: $predesktop) {
     margin-bottom: 30px;
-    justify-content: center;
   }
 
   @media screen and (min-width: $desktop) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: nowrap;
     margin-bottom: 50px;
-    justify-content: center;
   }
+}
+
+.button-list__item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .button-list__item {
   @media screen and (max-width: $pretablet) {
     margin-bottom: 15px;
-    margin-right: 8px;
   }
 
   @media screen and (min-width: $tablet) and (max-width: $predesktop) {
@@ -58,13 +55,6 @@
   }
 }
 
-  @media screen and (min-width: $tablet) and (max-width: $predesktop) {
-.button-list__item:not(:last-child) {
-  margin-right: 8px;
-}
-} 
-
-
 .button-list__button {
   @include font-style(var(--main-font), 500, 16px, 1.6, 0.03em);
   padding: 6px 22px;
@@ -73,7 +63,9 @@
   color: var(--main-color);
   background-color: var(--third-color);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
@@ -131,6 +123,10 @@
   }
 }
 
+  .projects-list__border--height {
+    height: 141.4px;
+  }
+
 @media screen and (min-width: $tablet) and (max-width: $predesktop) {
   .projects-list__item:nth-child(odd) {
     margin-right: 30px;
@@ -156,9 +152,7 @@
 }
 
 .projects-list__wrapp {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include display-style(flex, center, center);
   position: absolute;
   top: 0;
   left: 0;
@@ -166,7 +160,7 @@
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(101%);
-  
+
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
