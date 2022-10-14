@@ -1207,7 +1207,7 @@ picture img {
 .functions__item {
   position: relative;
 }
-.functions__item.functions__item:not(:last-child) {
+.functions__item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -1431,11 +1431,11 @@ picture img {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid #afb1b8;
   border-radius: 4px;
   height: 92px;
   fill: var(--icons-color);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 1200px) {
   .clientage-list__link {

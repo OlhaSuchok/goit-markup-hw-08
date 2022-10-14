@@ -65,7 +65,7 @@
 
 .clientage-list__link {
   @include display-style(flex, center, center);
-
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid #afb1b8;
   border-radius: 4px;
   height: 92px;
@@ -74,8 +74,6 @@
   @media screen and (min-width: $desktop) {
     width: 170px;
   }
-
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {

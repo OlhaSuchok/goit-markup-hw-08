@@ -20,7 +20,7 @@
 .functions__item {
   position: relative;
 
-  &.functions__item:not(:last-child) {
+    &:not(:last-child) {
     margin-right: 30px;
   }
 }
