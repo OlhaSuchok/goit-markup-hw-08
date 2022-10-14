@@ -207,11 +207,11 @@
   }
 }
 
-  @media screen and (max-width: $premobile) {
+@media screen and (max-width: $premobile) {
   .auth-nav__item:last-child {
     @include font-style(var(--main-font), 500, 26px, 1.18, 0.02em);
-  } 
   }
+}
 
 .auth-nav__icon {
   @media screen and (max-width: $pretablet) {

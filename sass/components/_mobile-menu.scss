@@ -61,7 +61,7 @@
 
   &:hover,
   &:focus {
-  fill: var(--nav-color);
+    fill: var(--nav-color);
   }
 }
 
@@ -82,7 +82,7 @@ body {
   color: var(--nav-color);
 
   @media screen and (max-width: $premobile) {
-  @include font-style(var(--main-font), 500, 12px, 1.22, 0.02em);
+    @include font-style(var(--main-font), 500, 12px, 1.22, 0.02em);
   }
 }
 
