@@ -1839,13 +1839,12 @@ picture img {
   }
 }
 
-.projects-list__border--height {
-  height: 141.4px;
-}
-
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .projects-list__item:nth-child(odd) {
     margin-right: 30px;
+  }
+  .projects-list__item:nth-child(odd) .projects-list__border--height {
+    height: 141.4px;
   }
   .projects-list__item:not(last-child) {
     margin-bottom: 30px;
