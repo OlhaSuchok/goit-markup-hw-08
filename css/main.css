@@ -1609,13 +1609,8 @@ picture img {
 .footer-subscription__form {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
-}
-@media screen and (min-width: 1200px) {
-  .footer-subscription__form {
-    align-items: flex-start;
-  }
 }
 
 .footer-subscription__text {
@@ -1914,6 +1909,7 @@ picture img {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  max-width: 100%;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: var(--accent-color);

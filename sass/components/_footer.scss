@@ -136,12 +136,8 @@
 }
 
 .footer-subscription__form {
-  @include display-style(flex, center, center);
+  @include display-style(flex, center, left);
   flex-direction: column;
-
-  @media screen and (min-width: $desktop) {
-    align-items: flex-start;
-  }
 }
 
 .footer-subscription__text {
