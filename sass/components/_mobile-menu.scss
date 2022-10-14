@@ -80,6 +80,10 @@ body {
   @include font-style(var(--main-font), 500, 18px, 1.22, 0.02em);
   @include display-style(flex, center, center);
   color: var(--nav-color);
+
+  @media screen and (max-width: $premobile) {
+  @include font-style(var(--main-font), 500, 12px, 1.22, 0.02em);
+  }
 }
 
 .header__item {

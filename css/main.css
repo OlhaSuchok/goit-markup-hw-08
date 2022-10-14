@@ -2016,6 +2016,15 @@ body.scroll-lock {
   align-items: center;
   color: var(--nav-color);
 }
+@media screen and (max-width: 479px) {
+  .header__list {
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+  }
+}
 
 .header__item {
   position: relative;
