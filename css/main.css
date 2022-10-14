@@ -603,22 +603,23 @@ picture img {
 
 @media screen and (max-width: 767px) {
   .auth-nav__item:first-child {
+    color: var(--secondary-color);
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    order: 2;
+  }
+}
+@media screen and (max-width: 767px) {
+  .auth-nav__item:last-child {
     margin-bottom: 32px;
     color: var(--nav-color);
     font-family: var(--main-font);
     font-weight: 500;
     font-size: 34px;
     line-height: 1.18;
-    letter-spacing: 0.02em;
-  }
-}
-@media screen and (max-width: 767px) {
-  .auth-nav__item:last-child {
-    color: var(--secondary-color);
-    font-family: var(--main-font);
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.17;
     letter-spacing: 0.02em;
   }
 }
@@ -1113,13 +1114,13 @@ picture img {
   .criteria__item:nth-child(odd) {
     margin-right: 30px;
   }
+  .criteria__item:nth-last-child(-n+2) {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .criteria__item:not(:last-child) {
     margin-right: 30px;
-  }
-  .criteria__item:nth-last-child(-n+2) {
-    margin-bottom: 30px;
   }
 }
 .criteria__title {

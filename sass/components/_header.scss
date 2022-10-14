@@ -192,16 +192,18 @@
 
 @media screen and (max-width: $pretablet) {
   .auth-nav__item:first-child {
-    margin-bottom: 32px;
-    color: var(--nav-color);
-    @include font-style(var(--main-font), 500, 34px, 1.18, 0.02em);
+    // margin-bottom: 32px;
+    color: var(--secondary-color);
+    @include font-style(var(--main-font), 500, 24px, 1.17, 0.02em);
+    order: 2;
   }
 }
 
 @media screen and (max-width: $pretablet) {
   .auth-nav__item:last-child {
-    color: var(--secondary-color);
-    @include font-style(var(--main-font), 500, 24px, 1.17, 0.02em);
+    margin-bottom: 32px;
+    color: var(--nav-color);
+    @include font-style(var(--main-font), 500, 34px, 1.18, 0.02em);
   }
 }
 
