@@ -1980,7 +1980,12 @@ picture img {
   right: 15px;
   width: 40px;
   height: 40px;
+  cursor: pointer;
   background-color: #fff;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header__close:hover, .header__close:focus {
+  fill: var(--nav-color);
 }
 
 body.scroll-lock {
